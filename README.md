@@ -2,7 +2,8 @@
 
 > A recommender system for React
 
-[![NPM](https://img.shields.io/npm/v/react-recommender.svg)](https://www.npmjs.com/package/react-recommender) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-recommender.svg)](https://www.npmjs.com/package/react-recommender) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Documentation Status](https://readthedocs.org/projects/react-recommender/badge/?version=latest)](https://react-recommender.readthedocs.io/en/latest/?badge=latest)
+
 
 ## Install
 
