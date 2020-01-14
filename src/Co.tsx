@@ -8,7 +8,12 @@ export interface ICo {
   /**
    * We definitely need a text
    */
-  text: string
+  text: string,
+
+  /**
+   * You don't need another property
+   */
+  another?: number
 }
 
 /**

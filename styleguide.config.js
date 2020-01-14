@@ -2,7 +2,10 @@ const path = require('path');
 const glob = require('glob');
 
 module.exports = {
-  title: 'React Style Guide Example',
+    moduleAliases: {
+        "react-recommender": path.resolve(__dirname, "src")
+    },
+  title: 'React-Recommender',
   components: function () {
     return glob.sync(path.resolve(__dirname, 'src/**/*.{js, jsx,ts,tsx}'))
       .filter(function (module) {
@@ -13,4 +16,5 @@ module.exports = {
   propsParser: require('react-docgen-typescript').withDefaultConfig({ propFilter: { skipPropsWithoutDoc: false } }).parse,
   styleguideDir: "docs",
   serverPort: 3000
+
 };
