@@ -1,33 +1,27 @@
 import { defineFeature, loadFeature } from 'jest-cucumber';
 
-const feature = loadFeature('./features/optimize.feature');
+const feature = loadFeature('src/features/optimize.feature');
 
 defineFeature(feature, test => {
   console.log("feature: ", feature);
 
   test('Select the best performing content', ({ given, when, then }) => {
 
-    console.log("given: ", given);
-
-    /*
-    given('I am Elon Musk attempting to launch a rocket into space', () => {
-      rocket = new Rocket();
+    given('There are three options of a content', () => {
+      console.log("given")
     });
 
-    when('I launch the rocket', () => {
-      rocket.launch();
+    given('Option three is the best performing option', () => {
+      console.log("given")
     });
 
-    then('the rocket should end up in space', () => {
-      expect(rocket.isInSpace).toBe(true);
+    when('A user visits the content', () => {
+      console.log("when")
     });
 
-    then('the booster(s) should land back on the launch pad', () => {
-      expect(rocket.boostersLanded).toBe(true);
-    });
-
-    then('nobody should doubt me ever again', () => {
+    then('The content should be the best performing option', () => {
       expect('people').not.toBe('haters');
-    });*/
+    });
+
   });
 });
