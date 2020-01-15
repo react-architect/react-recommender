@@ -32,3 +32,10 @@ export default function ExampleComponent (props: ICo) {
       </div>
     )
 }
+
+
+export function runTest(runTest: any) {
+  return <div>
+    Content Number Three
+  </div>
+}
