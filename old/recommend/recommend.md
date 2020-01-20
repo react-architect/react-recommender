@@ -4,8 +4,9 @@
 import { Option } from 'react-recommender';
 <div>
   <Recommend
+    account="mail@react-architect.com"
     mode="egreedy"
-    epsilon={0.2}
+    epsilon={0}
     recommendId="test"
     options={[
       <Option id="helloWorld">

@@ -1,20 +1,10 @@
-/**
- * Created by frank.zickert on 14.01.20.
- */
 
 import React, { useEffect, useState } from 'react';
+import {isNumber} from '../libs';
+import  {RECOMMEND, URL} from '../constants';
 import {IOption} from "../option/Option";
 
-const URL = "http://localhost:3000/_api";
 
-const RECOMMEND = "/recommend";
-const REPORT = "/report";
-
-const STATE = {
-  LOADING: "LOADING",
-  ERROR: "ERROR",
-  RESPONSE: "RESPONSE"
-};
 
 export interface IRecommendResult {
   loading: Boolean,
@@ -28,30 +18,16 @@ type Res = (props: IRecommendResult) => React.ReactNode;
 
 export interface IRecommend {
   mode: string | number,
-  recommendId?: string,
+  objectiveId?: string,
   options: IOption[],
   children: Res,
   epsilon?: Number
 };
 
-function isNumber(value: string | number): boolean
-{
-  return ((value != null) &&
-  (value !== '') &&
-  !isNaN(Number(value.toString())));
-}
-
 export default function Recommend (props: IRecommend): React.ReactNode {
   const [state, setState] = useState({state: STATE.LOADING, recommended: undefined});
 
-  const params = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-      "Accept": "application/json",
-      "Accept-Charset": "utf-8"
-    }
-  };
+
 
   async function loadData (onResult, onError) {
 
@@ -66,6 +42,7 @@ export default function Recommend (props: IRecommend): React.ReactNode {
         Object.assign({
           body: JSON.stringify({
             recommendId: props.recommendId,
+            account: props.account,
             mode: props.mode,
             options: props.options.map(option => option.props.id),
             epsilon: props.epsilon
@@ -112,6 +89,7 @@ export default function Recommend (props: IRecommend): React.ReactNode {
     onSuccess: (optionId) => fetch(URL+REPORT,
       Object.assign({
         body: JSON.stringify({
+          account: props.account,
           recommendId: props.recommendId,
           mode: props.mode,
           optionId: optionId
