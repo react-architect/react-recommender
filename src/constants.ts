@@ -3,19 +3,19 @@
  *
  * @type {string}
  */
-export const URL = "http://localhost:3000/_api";
+export const DEFAULT_URL = "http://localhost:3000/_api";
 
 /**
  * The endpoint to request a recommendation
  * @type {string}
  */
-export const RECOMMEND = "/recommend";
+export const RECOMMEND_API = "/recommend";
 
 /**
  * The endpoint to collect the achieved objectives
  * @type {string}
  */
-export const REPORT = "/report";
+export const REPORT_API = "/report";
 
 /**
  * Default params for fetching-requests
