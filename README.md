@@ -60,8 +60,8 @@ ReactDOM.render(
 
 ## Learn More
 
-The [documentation](https://react-architect.github.io/react-recommender/) contains
-a description of the components.
+The [documentation](https://react-recommender.readthedocs.io/en/latest/) contains
+a description of the components and a implementation guide.
 
 Do you prefer a tutorial? No problem:
 [How To Build A Self-Improving React App--It is easier than you might think](https://www.react-architect.com/page?ref=medium_howselfimprove&dest=/)
