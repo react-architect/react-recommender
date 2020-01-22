@@ -6,7 +6,9 @@ Install Library
 ================
 
 You can install `react-recommender <https://github.com/react-architect/react-recommender>`_
-easily:
+easily.
+
+.. code-block:: bash
 
     npm install --save react-recommender
 
@@ -15,7 +17,10 @@ Integrate React-Recommender
 ===========================
 
 `react-recommender <https://github.com/react-architect/react-recommender>`_ provides a higher-order-component as the
-default export. Integrate it at a high level in your app.:
+default export. Integrate it at a high level in your app.
+
+.. code-block:: javascript
+    :emphasize-lines: 1,4
 
     import Recommender from 'react-recommender';
 
@@ -42,6 +47,8 @@ app will use the objective to assess its performance.
 
 Let's say we want the users of our app to click on a certain button anywhere in our component hierarchy.
 
+.. code-block:: javascript
+    :emphasize-lines: 2,4,5
 
     import react from 'react';
     import { withObjective } from 'react-recommender';
@@ -65,6 +72,9 @@ options to our React app. Options, the app can select one from when it renders. 
 different content, like your app's headline. You can apply different styles, like the color of a button.
 You can even use different options of your app's internal logic - if you like. You can use as an option whatever
 you can put into a React component. And that is pretty much anything you can think of.
+
+.. code-block:: javascript
+    :emphasize-lines: 2,4,5
 
     import react from 'react';
     import { Recommend, Option } from 'react-recommender';
