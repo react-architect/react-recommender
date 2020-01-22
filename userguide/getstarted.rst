@@ -2,23 +2,11 @@
 Getting Started
 ***************
 
-Start With An Example
-=====================
-
-Our `GitHub-Repository <https://github.com/infrastructure-components>`_ contains exemplary projects of each supported
-architecture topology:
-
-* `Single-Page-App <https://github.com/infrastructure-components/singlepage_example>`_
-* `Isomorphic App <https://github.com/infrastructure-components/isomorphic_example>`_
-
-Fork or clone any of these repositories and run ``npm install``.
-
-
 Install Library
 ================
 
 You can install `react-recommender <https://github.com/react-architect/react-recommender>`_
-easily::
+easily:
 
     npm install --save react-recommender
 
@@ -27,7 +15,7 @@ Integrate React-Recommender
 ===========================
 
 `react-recommender <https://github.com/react-architect/react-recommender>`_ provides a higher-order-component as the
-default export. Integrate it at a high level in your app.
+default export. Integrate it at a high level in your app.:
 
     import Recommender from 'react-recommender';
 

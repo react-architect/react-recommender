@@ -7,10 +7,14 @@ Quick Start
 
 Install the `react-recommender <https://github.com/react-architect/react-recommender>`_ library.
 
+.. code-block:: bash
+
     npm install --save react-recommender
 
 This is a full example. It optimizes the displayed message ("Hello World" or "Hello You") based on which option better
 achieves the objective: making the user click the button.
+
+.. code-block:: TypeScript
 
     import Recommender, { Recommend, Option, withObjective } from 'react-recommender';
 
