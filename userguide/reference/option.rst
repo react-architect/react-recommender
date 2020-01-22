@@ -10,8 +10,8 @@ The ``<Option/>-component renders whatever you provide as its children. It is th
 
 Properties
 ==========
-.. csv-table:: a title
+.. csv-table:: Properties
    :header: "Prop name", "Type", "Default", "Description"
-   :widths: 20, 20, 20, 60
+   :widths: 20, 20, 20, 40
 
    "id", "string", "Required", "The id is an arbitrary string. It must be unique all options provided to a <Recommend/>."

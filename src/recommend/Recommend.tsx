@@ -19,13 +19,32 @@ export const RECOMMENDATION_STATE = {
 
 export interface IRecommend {
     /**
-     *
+     * The mode specifies the optimizing algorithm. Use "egreedy" for epsilon greedy, "random" for no optimization, or a
+     * number to fix the resulting recommendation to the specified index of the options array.
      */
     mode: string | number,
-    objectiveId?: string,
+
+    /**
+     * Specify the id of the objective to be achieved.
+     */
+    objectiveId: string,
+
+    /**
+     * Array of `<Option/>`-components. `<Recommend/>` chooses the best options in order to achieve the specified objective
+     */
     options: IOption[],
+
+    /**
+     * If you use "egreedy"-mode, you can specify the epsilon (float between 0.0 and 1.0). Epsilon is the probability
+     * with which <Recommend/> recommends an option randomly.
+     */
+    epsilon?: Number,
+
+    /**
+     * Provide a function as the child of <Recommend/>. See Recommendation.
+     */
     children: Recommendation,
-    epsilon?: Number
+
 };
 
 
@@ -49,9 +68,7 @@ export const provideOption = (Component: React.ReactType) => {
 
 /**
  *
- * @param props
- * @returns {any}
- * @constructor
+ * The `<Recommend/>`-component is the optimizer. It selects and recommends the best of the provided options.
  */
 export default function Recommend (props: IRecommend) {
     const [state, setState] = useState({state: RECOMMENDATION_STATE.LOADING, recommendation: undefined});

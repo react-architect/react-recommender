@@ -20,7 +20,10 @@ export interface IRecommender {
     serverUrl?: string
 }
 
-
+/**
+ * The `<Recommender/>`-component is the higher-order-component you need to integrate into your app.
+ *
+ */
 export default function Recommender(props: IRecommender) {
     const [optionId, setOptionId] = useState(undefined);
 

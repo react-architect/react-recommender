@@ -7,9 +7,9 @@ export interface IRecommendResult {
     loading: Boolean,
 
     /**
-     * The recommended option. Only defined if loading is done {false} and there is no {error}
+     * The id of the recommended option. Only defined if loading is done {false} and there is no {error}
      */
-    recommendation?: React.ReactNode,
+    recommendation?: string,
 
     /**
      * Error during loading the recommendation. If loading is complete ({false}), then either the error or the
@@ -21,7 +21,7 @@ export interface IRecommendResult {
      * Callback-function to render the option with the specified Id. Should be the recommended one. But it is up to
      * the app to render a different option
      *
-     * @param optionId
+     * @param optionId specifies the id of the option to be rendered
      */
     renderOption: (optionId: string) => React.ReactNode
 };
@@ -31,6 +31,6 @@ export type Recommendation = (props: IRecommendResult) => React.ReactNode;
 // this is a dummy function to create the docs
 /**
  *
- * The `Recommendation
+ * The `Recommendation` is the result of the `<Recommend/>`-component. Provide this function as a child of `<Recommend/>`
  */
 export function Recommendation(props: IRecommendResult): React.ReactNode  {return undefined};

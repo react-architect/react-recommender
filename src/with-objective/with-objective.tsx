@@ -28,7 +28,12 @@ const onAchieved = (accountId: string, objectiveId: string, optionId: string, se
     })
 );
 
-export function withObjective(Component: React.ReactType) {
+/**
+ * Higher-order function that adds the `onAchieved`-callback function to the properties of the wrapped component
+ *
+ * `function onAchieved(objectiveId: string): void` call this function with the id of the achieved objective.
+ */
+export function withObjective(Component: React.ReactType): React.ReactNode  {
 
     return function WrapperComponent(props) {
         return (

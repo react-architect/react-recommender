@@ -20,7 +20,6 @@ Integrate React-Recommender
 default export. Integrate it at a high level in your app.
 
 .. code-block:: javascript
-    :emphasize-lines: 1,4
 
     import Recommender from 'react-recommender';
 
@@ -48,7 +47,6 @@ app will use the objective to assess its performance.
 Let's say we want the users of our app to click on a certain button anywhere in our component hierarchy.
 
 .. code-block:: javascript
-    :emphasize-lines: 2,4,5
 
     import react from 'react';
     import { withObjective } from 'react-recommender';
@@ -74,7 +72,6 @@ You can even use different options of your app's internal logic - if you lik
 you can put into a React component. And that is pretty much anything you can think of.
 
 .. code-block:: javascript
-    :emphasize-lines: 2,4,5
 
     import react from 'react';
     import { Recommend, Option } from 'react-recommender';
@@ -109,13 +106,11 @@ chance of achieving the specified objective (here: ``OptimizeClicks``).
 
 We provide a function as the child of the ``<Recommend/>``-component. This function takes a few parameters:
 
-- ``loading`` is a ``Boolean``-value. It indicates whether the app is currently loading the recommendation (``true``)
-or whether it has finished (``false``).
+- ``loading`` is a ``Boolean``-value. It indicates whether the app is currently loading the recommendation (``true``) or whether it has finished (``false``).
 
 - ``error`` may contain an error message if something went wrong while loading the best option.
 
-- If there was no error and loading finished, ``recommendation`` contains the ``id`` of the recommended option.
-You specify the ``id`` as the property of an ``<Option/>``-component.
+- If there was no error and loading finished, ``recommendation`` contains the ``id`` of the recommended option. You specify the ``id`` as the property of an ``<Option/>``-component.
 
 - You can use the ``renderOption``-callback function to render the content of an option by specifying the
 ``<Option/>``'s ``id``. Usually, this is the ``id`` you get as the ``recommendation``. But you are free to overrule it.
@@ -131,4 +126,4 @@ achieves the objective. You can have a look at the current state of your recomme
 at `https://www.react-architect.com <https://www.react-architect.com/page?ref=docs&dest=/>`_.
 
 .. image:: assets/dashboard.png
-   :scale: 25 %
+   :scale: 50 %

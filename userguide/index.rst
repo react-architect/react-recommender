@@ -14,7 +14,7 @@ Install the `react-recommender <https://github.com/react-architect/react-recomme
 This is a full example. It optimizes the displayed message ("Hello World" or "Hello You") based on which option better
 achieves the objective: making the user click the button.
 
-.. code-block:: TypeScript
+.. code-block:: javascript
 
     import Recommender, { Recommend, Option, withObjective } from 'react-recommender';
 
