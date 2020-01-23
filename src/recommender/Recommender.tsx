@@ -27,6 +27,7 @@ export interface IRecommender {
 export default function Recommender(props: IRecommender) {
     const [optionId, setOptionId] = useState(undefined);
 
+    console.log(optionId);
     return (
         <RecommenderContext.Provider
             value={{
