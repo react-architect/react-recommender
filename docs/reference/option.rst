@@ -14,5 +14,5 @@ Properties
    :header: "Prop name", "Type", "Default", "Description"
    :widths: 20, 20, 20, 40
 
-   "id", "string", "Required", "The id is an arbitrary string.
+   "id", "string", "Required", "| The id is an arbitrary string.
    It must be unique all options provided to a <Recommend/>."

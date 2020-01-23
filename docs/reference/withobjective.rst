@@ -18,4 +18,5 @@ Properties
    :header: "Prop name", "Type", "Default", "Description"
    :widths: 20, 20, 20, 40
 
-   "Component", "React.ReactType", "Required", "The wrapped React component. This componend receives ``onAchieved`` as a property"
+   "Component", "React.ReactType", "Required", "The wrapped React component.
+   his componend receives ``onAchieved`` as a property"

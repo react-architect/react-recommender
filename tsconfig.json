@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "module": "esnext",
-    "target": "es5",
-    "lib": ["es6", "dom", "es2016", "es2017"],
+    "module": "commonjs",
     "sourceMap": true,
-    "allowJs": false,
-    "jsx": "react",
-    "declaration": true,
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": true,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "suppressImplicitAnyIndexErrors": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "allowSyntheticDefaultImports": true
+    "outDir": "./dist",
+    "types": [
+      "node"
+    ],
+
+    "target": "es6",
+
+    "isolatedModules": false,
+    // Import non-ES modules as default imports.
+    "esModuleInterop": true,
+
+    "jsx": "react"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    //"node_modules",
+    "dist",
+    "old",
+    "**/*.spec.ts"
+  ]
 }

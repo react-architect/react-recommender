@@ -3,7 +3,9 @@
  *
  * @type {string}
  */
-export const DEFAULT_URL = "http://localhost:3000/_api";
+//export const DEFAULT_URL = "https://2r0tzp6i4l.execute-api.eu-west-1.amazonaws.com/test/_api";
+export const DEFAULT_URL = "https://www.react-architect.com/_api";
+//export const DEFAULT_URL = "http://localhost:3000/_api";
 
 /**
  * The endpoint to request a recommendation
