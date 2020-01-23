@@ -1,6 +1,6 @@
 {
   "name": "react-recommender",
-  "version": "0.1.0s",
+  "version": "0.1.0",
   "description": "A recommender system for React",
   "author": "Dr. Frank Zickert",
   "license": "MIT",
