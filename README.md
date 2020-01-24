@@ -4,7 +4,6 @@
 
 [![NPM](https://img.shields.io/npm/v/react-recommender.svg)](https://www.npmjs.com/package/react-recommender)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Documentation Status](https://readthedocs.org/projects/react-recommender/badge/?version=latest)](https://react-recommender.readthedocs.io/en/latest/?badge=latest)
 [![GitHub license](https://img.shields.io/github/license/msaracevic/react-embed-gist.svg)](https://github.com/msaracevic/react-embed-gist/blob/master/LICENSE)
 
 

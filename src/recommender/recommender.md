@@ -11,6 +11,7 @@ const Objective = withObjective(({onAchieved, ...props}) => <button onClick={(ev
             mode="egreedy"
             epsilon={0.1}
             objectiveId="OptimizeClicks"
+            origin="example_A"
             options={[
               <Option id="helloWorld">
                 <div>Hello World</div>

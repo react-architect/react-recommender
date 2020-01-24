@@ -25,15 +25,17 @@ export interface IRecommender {
  *
  */
 export default function Recommender(props: IRecommender) {
-    const [optionId, setOptionId] = useState(undefined);
+    const [optionData, setOptionData] = useState({optionId: undefined, origin: undefined});
 
-    console.log(optionId);
+    console.log(optionData)
+
     return (
         <RecommenderContext.Provider
             value={{
                 accountId: props.accountId,
-                optionId: optionId,
-                setOptionId: setOptionId,
+                origin: optionData.origin,
+                optionId: optionData.optionId,
+                setOptionData: setOptionData,
                 serverUrl: props.serverUrl
             }}>{props.children}
         </RecommenderContext.Provider>

@@ -12,13 +12,15 @@ import { RecommenderContext } from '../recommender/Recommender';
  * @param objectiveId specifies the id of the achieved objective
  * @param optionId specifies the option that has beed used
  */
-const onAchieved = (accountId: string, objectiveId: string, optionId: string, serverUrl?: string) => (
+const onAchieved = (accountId: string, objectiveId: string, optionId: string, serverUrl?: string, origin?: string, metadata?: any) => (
     fetch((serverUrl ? serverUrl : DEFAULT_URL)+REPORT_API,
         Object.assign({
             body: JSON.stringify({
                 accountId: accountId,
                 objectiveId: separateDevEnv(objectiveId),
-                optionId: optionId
+                optionId: optionId,
+                origin: origin,
+                metadata: metadata
             })
         }, FETCH_PARAMS)
     ).then(result => {
@@ -42,8 +44,8 @@ export function withObjective(Component: React.ReactType): React.ReactNode  {
 
                     return <Component
                         {...props}
-                        onAchieved={(objectiveId: string) => (
-                            onAchieved(context.accountId,objectiveId,context.optionId, context.serverUrl)
+                        onAchieved={(objectiveId: string, metadata?: any) => (
+                            onAchieved(context.accountId,objectiveId,context.optionId, context.serverUrl, context.origin, metadata)
                         )}
                     />
                 }}

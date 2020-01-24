@@ -36,14 +36,20 @@ export interface IRecommend {
 
     /**
      * If you use "egreedy"-mode, you can specify the epsilon (float between 0.0 and 1.0). Epsilon is the probability
-     * with which <Recommend/> recommends an option randomly.
+     * with which `<Recommend/>` recommends an option randomly.
      */
     epsilon?: Number,
 
     /**
-     * Provide a function as the child of <Recommend/>. See Recommendation.
+     * Provide the origin page (e.g. referrer).
+     */
+    origin?: string,
+
+    /**
+     * Provide a function as the child of `<Recommend/>`. See Recommendation.
      */
     children: Recommendation,
+
 
 };
 
@@ -83,7 +89,8 @@ export default function Recommend (props: IRecommend) {
                         accountId: props["accountId"],
                         mode: props.mode,
                         options: props.options.map(option => option["props"].id),
-                        epsilon: props.epsilon
+                        epsilon: props.epsilon,
+                        origin: props.origin
                     })
                 }, FETCH_PARAMS)
             ).then(result => result.json()).then(parsedBody => {
@@ -110,7 +117,13 @@ export default function Recommend (props: IRecommend) {
                     recommendation: state.state === RECOMMENDATION_STATE.RESPONSE ? state.recommendation : undefined,
                     error: state.state === RECOMMENDATION_STATE.ERROR ? state.recommendation : undefined,
                     renderOption: (optionId) => {
-                        context.setOptionId(optionId);
+                        if (context.optionId !== optionId || context.origin !== props.origin) {
+                            context.setOptionData({
+                                optionId: optionId,
+                                origin: props.origin
+                            });
+                        }
+
                         return props.options.find(option => option["props"].id == optionId);
                     }
                 });

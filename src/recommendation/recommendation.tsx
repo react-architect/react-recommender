@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface IRecommendResult {
     /**
-     * Indicates whether the Recommend-component is loading the recommendation {true} or not {false}
+     * Indicates whether the `<Recommend/>`-component is loading the recommendation {true} or not {false}
      */
     loading: Boolean,
 
