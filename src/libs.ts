@@ -7,5 +7,5 @@ export const isNumber = (value: string | number): boolean => (
 
 
 export const separateDevEnv = (objectiveId: string) => objectiveId + (
-    location.hostname === "localhost" || location.hostname === "127.0.0.1" ? "-dev" : "");
+    location?.hostname === "localhost" || location?.hostname === "127.0.0.1" ? "-dev" : "");
 
